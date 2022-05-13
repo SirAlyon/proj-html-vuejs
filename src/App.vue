@@ -75,6 +75,79 @@
           </div>
         </div>
       </div>
+      <div class="featured">
+        <div class="container">
+          <div class="title">
+            <hr />
+            <span>Featured Products</span>
+            <hr />
+          </div>
+          <div>Must have products from out top sellers</div>
+          <div class="gender">
+            <span>MEN</span>
+            <span>WOMEN</span>
+            <span>ACCESSORIES</span>
+          </div>
+          <div class="featured_card">
+            <div class="col-3">
+              <div class="product">
+                <img
+                  src="@/assets/img/black_elegant_leather_jacket.jpg"
+                  alt=""
+                />
+                <div class="name">Black Leather Jacket</div>
+                <div class="info">Men, Jackets, Jeans</div>
+                <div class="price">
+                  <span class="discounted_price">$235</span>
+                  <span>$200</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="product">
+                <img
+                  src="@/assets/img/black_elegant_leather_jacket.jpg"
+                  alt=""
+                />
+                <div class="name">Black Leather Jacket</div>
+                <div class="info">Men, Jackets, Jeans</div>
+                <div class="price">
+                  <span class="discounted_price">$235</span>
+                  <span>$200</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="product">
+                <img
+                  src="@/assets/img/black_elegant_leather_jacket.jpg"
+                  alt=""
+                />
+                <div class="name">Black Leather Jacket</div>
+                <div class="info">Men, Jackets, Jeans</div>
+                <div class="price">
+                  <span class="discounted_price">$235</span>
+                  <span>$200</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="product">
+                <img
+                  src="@/assets/img/black_elegant_leather_jacket.jpg"
+                  alt=""
+                />
+                <div class="name">Black Leather Jacket</div>
+                <div class="info">Men, Jackets, Jeans</div>
+                <div class="price">
+                  <span class="discounted_price">$235</span>
+                  <span>$200</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 </template>
@@ -93,9 +166,13 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #000000;
+}
+img {
+  max-width: 100%;
 }
 /* Start Main CSS */
+//Jumbotron
 .jumbotron {
   height: 900px;
   background-image: url("@/assets/img/home1_slide_one_bg.jpg");
@@ -104,6 +181,7 @@ export default {
   position: relative;
   overflow: hidden;
   .jumbo_text {
+    width: 100%;
     color: white;
     position: absolute;
     left: 50%;
@@ -136,6 +214,62 @@ export default {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+  }
+}
+//Featured Products
+.featured {
+  padding: 5rem 0;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    hr {
+      width: 27%;
+      margin-right: 2rem;
+      margin-left: 2rem;
+      border: 0.5px solid rgba(128, 128, 128, 0.5);
+    }
+  }
+  .gender {
+    span {
+      display: inline-block;
+      font-weight: bold;
+      margin-top: 4rem;
+      padding: 1rem 3.5rem;
+      border: 1px solid lightgray;
+      background-color: rgba(211, 211, 211, 0.5);
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
+  .featured_card {
+    display: flex;
+    .product {
+      margin-top: 2rem;
+      text-align: start;
+      .name {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      .info {
+        color: gray;
+      }
+      .price {
+        margin-top: 0.7rem;
+        color: #427ed5;
+        font-size: 1.2rem;
+        .discounted_price {
+          text-decoration: line-through;
+          font-size: 1rem;
+          margin-right: 1rem;
+        }
+      }
+    }
   }
 }
 
