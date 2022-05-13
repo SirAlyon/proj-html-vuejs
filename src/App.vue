@@ -148,6 +148,64 @@
           </div>
         </div>
       </div>
+      <div class="collections">
+        <div class="col-4">
+          <div class="collection">
+            <img src="@/assets/img/winter_collection_bg.jpg" alt="" />
+            <div class="text">
+              <h3>Winter Collection</h3>
+              <div class="fs-4">STYLISH AND WARM</div>
+              <span class="collection_btn">VIEW MORE</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="collection">
+            <img src="@/assets/img/spring_collection_bg.jpg" alt="" />
+            <div class="text">
+              <h3>Winter Collection</h3>
+              <div class="fs-4">STYLISH AND WARM</div>
+              <span class="collection_btn">VIEW MORE</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="collection">
+            <img src="@/assets/img/autumn_collection_bg.jpg" alt="" />
+            <div class="text">
+              <h3>Winter Collection</h3>
+              <div class="fs-4">STYLISH AND WARM</div>
+              <span class="collection_btn">VIEW MORE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="best_seller">
+        <div class="container">
+          <div class="title">
+            <hr />
+            <span>Best Seller</span>
+            <hr />
+          </div>
+          <div>Must have products from out top sellers</div>
+          <div class="slider">
+            <div class="col-3">
+              <img src="@/assets/img/slider/modern_love_tee-400x520.jpg" alt="">
+            </div>
+            <div class="col-3">
+              <img src="@/assets/img/slider/modern_black_leather_suit-400x520.jpg" alt="">
+            </div>
+            <div class="col-3">
+              <img src="@/assets/img/slider/hipster_black_top-400x520.jpg" alt="">
+            </div>
+            <div class="col-3">
+              <img src="@/assets/img/slider/blue_leather_jacket-400x520.jpg" alt="">
+            </div>
+            
+            <!-- <img src="@/assets/img/slider/black_leather_jacket-400x520.jpg" alt=""> -->
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 </template>
@@ -270,6 +328,67 @@ img {
         }
       }
     }
+  }
+}
+//Collections
+.collections {
+  display: flex;
+  color: white;
+  .collection {
+    aspect-ratio: 1 / 1;
+    position: relative;
+    img {
+      width: 100%;
+      max-height: 100%;
+      object-position: top;
+      object-fit: cover;
+    }
+    .text {
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 20%;
+      h3 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      .collection_btn {
+        display: inline-block;
+        border: 3px solid white;
+        padding: 0.7rem 2rem;
+        border-radius: 2rem;
+        margin-top: 1rem;
+        transition: linear 0.4s;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.5);
+          color: black;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+//Best Seller
+.best_seller {
+  padding: 5rem 0;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    hr {
+      width: 27%;
+      margin-right: 2rem;
+      margin-left: 2rem;
+      border: 0.5px solid rgba(128, 128, 128, 0.5);
+    }
+  }
+  .slider{
+    display: flex;
   }
 }
 
