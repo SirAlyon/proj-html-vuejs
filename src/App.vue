@@ -190,19 +190,106 @@
           <div>Must have products from out top sellers</div>
           <div class="slider">
             <div class="col-3">
-              <img src="@/assets/img/slider/modern_love_tee-400x520.jpg" alt="">
+              <img
+                src="@/assets/img/little_slider/modern_love_tee-200x260.jpg"
+                alt=""
+              />
             </div>
             <div class="col-3">
-              <img src="@/assets/img/slider/modern_black_leather_suit-400x520.jpg" alt="">
+              <img
+                src="@/assets/img/little_slider/modern_black_leather_suit-200x260.jpg"
+                alt=""
+              />
             </div>
             <div class="col-3">
-              <img src="@/assets/img/slider/hipster_black_top-400x520.jpg" alt="">
+              <img
+                src="@/assets/img/little_slider/hipster_black_top-200x260.jpg"
+                alt=""
+              />
             </div>
             <div class="col-3">
-              <img src="@/assets/img/slider/blue_leather_jacket-400x520.jpg" alt="">
+              <img
+                src="@/assets/img/little_slider/blue_leather_jacket-200x260.jpg"
+                alt=""
+              />
             </div>
-            
+
             <!-- <img src="@/assets/img/slider/black_leather_jacket-400x520.jpg" alt=""> -->
+          </div>
+        </div>
+      </div>
+      <div class="free_shipping">
+        <div class="card">
+          <img src="@/assets/img/promo_box_1_bg.jpg" alt="" />
+          <div class="text">
+            <div class="title fw-bold fs-2">70% Off</div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
+              similique!
+            </p>
+            <span class="collection_btn">VIEW MORE</span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="@/assets/img/promo_box_2_bg.jpg" alt="" />
+          <div class="text">
+            <div class="title fw-bold fs-2">70% Off</div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
+              similique!
+            </p>
+            <span class="collection_btn">VIEW MORE</span>
+          </div>
+        </div>
+      </div>
+      <div class="new_arrivals">
+        <div class="title">
+          <hr />
+          <span>Best Seller</span>
+          <hr />
+        </div>
+        <div>Brand new products from top designers</div>
+        <div class="slider">
+          <div class="col-3">
+            <img
+              src="@/assets/img/slider/black_leather_jacket-400x520.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-3">
+            <img
+              src="@/assets/img/slider/blue_leather_jacket-400x520.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-3">
+            <img
+              src="@/assets/img/slider/hipster_black_top-400x520.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-3">
+            <img
+              src="@/assets/img/slider/modern_black_leather_suit-400x520.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="main_bg">
+          <div class="content">
+            <img src="@/assets/img/man_testimonial.png" alt="" />
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis
+              minus iure ratione obcaecati tempore mollitia facilis quos
+              provident quasi. Tenetur totam similique delectus nulla provident!
+              Tenetur maiores quisquam quibusdam obcaecati.
+            </p>
+            <span>
+              <strong>Dario Pineda</strong>
+              , Theme Fusion
+            </span>
           </div>
         </div>
       </div>
@@ -387,8 +474,102 @@ img {
       border: 0.5px solid rgba(128, 128, 128, 0.5);
     }
   }
-  .slider{
+  .slider {
     display: flex;
+    padding: 4rem 0;
+  }
+  img {
+    height: 300px;
+  }
+}
+//Free Shipping
+.free_shipping {
+  padding: 4rem 0;
+  background-image: url("@/assets/img/bkgd_confetti-compressor.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card {
+    position: relative;
+    margin: 0 0.5rem;
+  }
+  img {
+    width: 500px;
+  }
+  .text {
+    width: 50%;
+    text-align: start;
+    color: white;
+    position: absolute;
+    left: 35%;
+    top: 25%;
+    transform: translateX(-50%);
+  }
+  .collection_btn {
+    display: inline-block;
+    border: 3px solid white;
+    padding: 0.7rem 2rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    transition: linear 0.4s;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+      color: black;
+    }
+  }
+}
+//New Arrivals
+.new_arrivals {
+  padding: 5rem 0;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    hr {
+      width: 27%;
+      margin-right: 2rem;
+      margin-left: 2rem;
+      border: 0.5px solid rgba(128, 128, 128, 0.5);
+    }
+  }
+  .slider {
+    display: flex;
+    padding: 4rem 0;
+  }
+}
+//Testimonial
+.testimonial {
+  width: 100%;
+  height: 650px;
+  background-image: url("@/assets/img/testimonials_home_1_bg.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+  .main_bg {
+    width: 100%;
+    height: 70%;
+    background-image: url("@/assets/img/testimonials_home_1_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .content {
+    margin-top: -2rem;
+    p{
+      padding: 0 25%;
+      margin: 2rem 0;
+    }
   }
 }
 
