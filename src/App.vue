@@ -75,79 +75,7 @@
           </div>
         </div>
       </div>
-      <div class="featured">
-        <div class="container">
-          <div class="title">
-            <hr />
-            <span>Featured Products</span>
-            <hr />
-          </div>
-          <div>Must have products from out top sellers</div>
-          <div class="gender">
-            <span>MEN</span>
-            <span>WOMEN</span>
-            <span>ACCESSORIES</span>
-          </div>
-          <div class="featured_card">
-            <div class="col-3">
-              <div class="product">
-                <img
-                  src="@/assets/img/black_elegant_leather_jacket.jpg"
-                  alt=""
-                />
-                <div class="name">Black Leather Jacket</div>
-                <div class="info">Men, Jackets, Jeans</div>
-                <div class="price">
-                  <span class="discounted_price">$235</span>
-                  <span>$200</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="product">
-                <img
-                  src="@/assets/img/black_elegant_leather_jacket.jpg"
-                  alt=""
-                />
-                <div class="name">Black Leather Jacket</div>
-                <div class="info">Men, Jackets, Jeans</div>
-                <div class="price">
-                  <span class="discounted_price">$235</span>
-                  <span>$200</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="product">
-                <img
-                  src="@/assets/img/black_elegant_leather_jacket.jpg"
-                  alt=""
-                />
-                <div class="name">Black Leather Jacket</div>
-                <div class="info">Men, Jackets, Jeans</div>
-                <div class="price">
-                  <span class="discounted_price">$235</span>
-                  <span>$200</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="product">
-                <img
-                  src="@/assets/img/black_elegant_leather_jacket.jpg"
-                  alt=""
-                />
-                <div class="name">Black Leather Jacket</div>
-                <div class="info">Men, Jackets, Jeans</div>
-                <div class="price">
-                  <span class="discounted_price">$235</span>
-                  <span>$200</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Fueatured />
       <div class="collections">
         <div class="col-4">
           <div class="collection">
@@ -293,14 +221,100 @@
           </div>
         </div>
       </div>
+      <div class="our_blog">
+        <div class="container">
+          <div class="title">
+            <hr />
+            <span>From Our Blog</span>
+            <hr />
+          </div>
+          <div>The latest Classic Shop news</div>
+          <div class="articles">
+            <div class="row">
+              <div class="col-4">
+                <div class="article">
+                  <img src="@/assets/img/post_img_10-320x202.jpg" alt="" />
+                  <div class="content">
+                    <strong>Lorem ipsum dolor sit amet consectetur.</strong>
+                    <span class="date">Semptember 9th, 2015 | 0 comments</span>
+                    <span
+                      >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Aspernatur fuga nulla voluptatibus totam enim dicta amet
+                      cupiditate, voluptas at explicabo.</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="article">
+                  <img src="@/assets/img/post_img_11-320x202.jpg" alt="" />
+                  <div class="content">
+                    <strong>Lorem ipsum dolor sit amet consectetur.</strong>
+                    <span class="date">Semptember 9th, 2015 | 0 comments</span>
+                    <span
+                      >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Aspernatur fuga nulla voluptatibus totam enim dicta amet
+                      cupiditate, voluptas at explicabo.</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="article">
+                  <img src="@/assets/img/post_img_12-320x202.jpg" alt="" />
+                  <div class="content">
+                    <strong>Lorem ipsum dolor sit amet consectetur.</strong>
+                    <span class="date">Semptember 9th, 2015 | 0 comments</span>
+                    <span
+                      >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Aspernatur fuga nulla voluptatibus totam enim dicta amet
+                      cupiditate, voluptas at explicabo.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <strong>QUI LA SEZIONE MANCANTE</strong>
+        </div>
+      </div>
+      <div class="brands">
+        <div class="container">
+          <div class="title">BRAND LOGOS</div>
+          <div class="brand_list">
+            <img src="@/assets/img/brands/b_logotype_1.png" alt="" />
+            <img src="@/assets/img/brands/b_logotype_2.png" alt="" />
+            <img src="@/assets/img/brands/b_logotype_3.png" alt="" />
+            <img src="@/assets/img/brands/b_logotype_6.png" alt="" />
+            <img src="@/assets/img/brands/b_logotype_7.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="subscribe">
+        <div class="container">
+          <div class="text">
+            <div class="icon">
+              <font-awesome-icon icon="fa-solid fa-envelope" />
+            </div>
+            <h2>Subscribe now and get special offers</h2>
+          </div>
+          <div class="form">
+            <input type="text" placeholder="Insert your email" />
+            <span class="shop_now">SEND</span>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 </template>
 
 <script>
+import Fueatured from "@/components/FeaturedComponents.vue";
 export default {
   name: "App",
-  components: {},
+  components: {
+    Fueatured,
+  },
 };
 </script>
 
@@ -361,62 +375,7 @@ img {
     z-index: 1;
   }
 }
-//Featured Products
-.featured {
-  padding: 5rem 0;
-  .title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    span {
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    hr {
-      width: 27%;
-      margin-right: 2rem;
-      margin-left: 2rem;
-      border: 0.5px solid rgba(128, 128, 128, 0.5);
-    }
-  }
-  .gender {
-    span {
-      display: inline-block;
-      font-weight: bold;
-      margin-top: 4rem;
-      padding: 1rem 3.5rem;
-      border: 1px solid lightgray;
-      background-color: rgba(211, 211, 211, 0.5);
-      &:hover {
-        background-color: white;
-      }
-    }
-  }
-  .featured_card {
-    display: flex;
-    .product {
-      margin-top: 2rem;
-      text-align: start;
-      .name {
-        font-weight: bold;
-        font-size: 1.2rem;
-      }
-      .info {
-        color: gray;
-      }
-      .price {
-        margin-top: 0.7rem;
-        color: #427ed5;
-        font-size: 1.2rem;
-        .discounted_price {
-          text-decoration: line-through;
-          font-size: 1rem;
-          margin-right: 1rem;
-        }
-      }
-    }
-  }
-}
+
 //Collections
 .collections {
   display: flex;
@@ -566,13 +525,107 @@ img {
   }
   .content {
     margin-top: -2rem;
-    p{
+    p {
       padding: 0 25%;
       margin: 2rem 0;
     }
   }
 }
-
+//Our Blog
+.our_blog {
+  padding: 5rem 0;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    hr {
+      width: 27%;
+      margin-right: 2rem;
+      margin-left: 2rem;
+      border: 0.5px solid rgba(128, 128, 128, 0.5);
+    }
+  }
+  .articles {
+    display: flex;
+    padding: 3rem 0;
+    img {
+      width: 100%;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      margin-top: 1rem;
+      color: gray;
+      strong {
+        color: black;
+      }
+      .date {
+        font-size: 0.8rem;
+        margin: 0.4rem 0 1rem 0;
+      }
+    }
+  }
+}
+//Brands
+.brands {
+  background-color: rgba(211, 211, 211, 0.6);
+  padding: 3rem;
+  text-align: center;
+  color: rgb(93, 93, 93);
+  .brand_list {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+//Subscribe
+.subscribe {
+  background-color: rgba(48, 51, 55, 1);
+  color: white;
+  padding: 5rem 0;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .text{
+    display: flex;
+  }
+  h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+  .shop_now {
+    background-color: #427ed5;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    color: white;
+    font-weight: bold;
+  }
+  input {
+    margin-right: 0.5rem;
+    border-radius: 1rem;
+    padding: 0.3rem;
+  }
+  .icon {
+    color: gray;
+    font-size: 1.5rem;
+    background-color: rgba(43, 46, 50, 1);
+    border-radius: 50%;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+  }
+}
 /* Start Header CSS */
 .top_head {
   display: flex;
