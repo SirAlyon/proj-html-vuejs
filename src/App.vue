@@ -108,44 +108,7 @@
           </div>
         </div>
       </div>
-      <div class="best_seller">
-        <div class="container">
-          <div class="title">
-            <hr />
-            <span>Best Seller</span>
-            <hr />
-          </div>
-          <div>Must have products from out top sellers</div>
-          <div class="slider">
-            <div class="col-3">
-              <img
-                src="@/assets/img/little_slider/modern_love_tee-200x260.jpg"
-                alt=""
-              />
-            </div>
-            <div class="col-3">
-              <img
-                src="@/assets/img/little_slider/modern_black_leather_suit-200x260.jpg"
-                alt=""
-              />
-            </div>
-            <div class="col-3">
-              <img
-                src="@/assets/img/little_slider/hipster_black_top-200x260.jpg"
-                alt=""
-              />
-            </div>
-            <div class="col-3">
-              <img
-                src="@/assets/img/little_slider/blue_leather_jacket-200x260.jpg"
-                alt=""
-              />
-            </div>
-
-            <!-- <img src="@/assets/img/slider/black_leather_jacket-400x520.jpg" alt=""> -->
-          </div>
-        </div>
-      </div>
+      <BestSeller />
       <div class="free_shipping">
         <div class="card">
           <img src="@/assets/img/promo_box_1_bg.jpg" alt="" />
@@ -170,40 +133,7 @@
           </div>
         </div>
       </div>
-      <div class="new_arrivals">
-        <div class="title">
-          <hr />
-          <span>Best Seller</span>
-          <hr />
-        </div>
-        <div>Brand new products from top designers</div>
-        <div class="slider">
-          <div class="col-3">
-            <img
-              src="@/assets/img/slider/black_leather_jacket-400x520.jpg"
-              alt=""
-            />
-          </div>
-          <div class="col-3">
-            <img
-              src="@/assets/img/slider/blue_leather_jacket-400x520.jpg"
-              alt=""
-            />
-          </div>
-          <div class="col-3">
-            <img
-              src="@/assets/img/slider/hipster_black_top-400x520.jpg"
-              alt=""
-            />
-          </div>
-          <div class="col-3">
-            <img
-              src="@/assets/img/slider/modern_black_leather_suit-400x520.jpg"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
+      <NewArrivals />
       <div class="testimonial">
         <div class="main_bg">
           <div class="content">
@@ -309,11 +239,17 @@
 </template>
 
 <script>
-import Fueatured from "@/components/FeaturedComponents.vue";
+import Fueatured from "@/components/FeaturedComponent.vue";
+import BestSeller from "@/components/BestSellerComponent.vue";
+import NewArrivals from "@/components/NewArrivalsComponent.vue";
+
+
 export default {
   name: "App",
   components: {
     Fueatured,
+    BestSeller,
+    NewArrivals
   },
 };
 </script>
@@ -415,32 +351,7 @@ img {
     }
   }
 }
-//Best Seller
-.best_seller {
-  padding: 5rem 0;
-  .title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    span {
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    hr {
-      width: 27%;
-      margin-right: 2rem;
-      margin-left: 2rem;
-      border: 0.5px solid rgba(128, 128, 128, 0.5);
-    }
-  }
-  .slider {
-    display: flex;
-    padding: 4rem 0;
-  }
-  img {
-    height: 300px;
-  }
-}
+
 //Free Shipping
 .free_shipping {
   padding: 4rem 0;
@@ -479,29 +390,7 @@ img {
     }
   }
 }
-//New Arrivals
-.new_arrivals {
-  padding: 5rem 0;
-  .title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    span {
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    hr {
-      width: 27%;
-      margin-right: 2rem;
-      margin-left: 2rem;
-      border: 0.5px solid rgba(128, 128, 128, 0.5);
-    }
-  }
-  .slider {
-    display: flex;
-    padding: 4rem 0;
-  }
-}
+
 //Testimonial
 .testimonial {
   width: 100%;
