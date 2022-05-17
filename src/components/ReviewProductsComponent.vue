@@ -21,7 +21,8 @@
                       :key="index"
                     />
                   </div>
-                  <strong>${{ product.final_price }}</strong>
+                  <strong v-if="prev.name !== 'LATEST REVIEWS'">${{ product.final_price }}</strong>
+                  <strong v-else>by Admin</strong>
                 </div>
                 <div class="col-4">
                   <img
@@ -67,6 +68,12 @@ export default {
     align-items: center;
     justify-content: flex-start;
     border-bottom: 1px solid rgba(188, 188, 188, 0.569);
+    transition: linear 0.1s;
+    &:hover{
+      transform: scale(1.1);
+      //border: 1px solid rgba(188, 188, 188, 0.569);
+      cursor: pointer;
+    }
   }
   .stars {
     color: #427ed5;

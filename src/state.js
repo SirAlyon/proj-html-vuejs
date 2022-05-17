@@ -100,7 +100,7 @@ const state = Vue.observable({
     previews: [
         {
             name: 'FEATURED',
-            ids: [1, 4, 7]
+            ids: [1, 4, 6]
         },
         {
             name: 'ON SALE',
@@ -108,11 +108,11 @@ const state = Vue.observable({
         },
         {
             name: 'TOP RATED',
-            ids: [4, 7, 9]
+            ids: [9, 4, 7]
         },
         {
             name: 'LATEST REVIEWS',
-            ids: [6, 5, 10]
+            ids: [7, 4, 10]
         }
     ],
     articles: [
