@@ -7,7 +7,7 @@
         <hr />
       </div>
       <div>Must have products from out top sellers</div>
-      <Slider />
+      <Slider :c_class="'custom_fs_1'"/>
     </div>
   </div>
 </template>
@@ -42,5 +42,6 @@ export default {
     }
   }
 }
+
 
 </style>

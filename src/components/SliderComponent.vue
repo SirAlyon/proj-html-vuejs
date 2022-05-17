@@ -8,21 +8,21 @@
     >
       <div class="product_img">
         <img :src="require('@/assets/img/products/' + product.src)" alt="" />
-        <div class="card_overlay" v-if="overlay">
-          <div class="title">{{ product.name }}</div>
+        <div class="card_overlay" :class="c_class">
+          <div class="title" :class="c_class">{{ product.name }}</div>
           <div class="categories">
             <span v-for="(cat, index) in product.category" :key="index"
               >{{ styleCategory(cat, index, product.category) }}
             </span>
           </div>
-          <div class="price">${{ product.final_price }}</div>
+          <div class="price" :class="c_class">${{ product.final_price }}</div>
           <div class="actions fw-bold">
             <span>
-              <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+              <font-awesome-icon icon="fa-solid fa-cart-shopping" :class="c_class"/>
               Add to cart
             </span>
             <span>
-              <font-awesome-icon icon="fa-solid fa-list-ul" />
+              <font-awesome-icon icon="fa-solid fa-list-ul" :class="c_class"/>
               Details
             </span>
           </div>
@@ -45,7 +45,7 @@ import state from "@/state.js";
 export default {
   name: "SliderComponent",
   props: {
-    overlay: Boolean,
+    c_class: String,
   },
   data() {
     return {
@@ -115,15 +115,17 @@ img {
 }
 .col-c {
   width: 20%;
-}
-.product_img {
-  position: relative;
   &:hover .card_overlay {
     display: flex;
   }
 }
+.product_img {
+  position: relative;
+  
+}
 .card_overlay {
   height: 100%;
+  z-index: 10;
   width: 80%;
   margin: 0 10%;
   position: absolute;
@@ -141,7 +143,6 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: 1.5rem;
   .title {
     font-size: 2rem;
     font-weight: bold;
@@ -175,5 +176,12 @@ img {
   to {
     opacity: 1;
   }
+}
+
+.custom_fs_1{
+  font-size: 0.95rem!important;
+}
+.custom_fs_2{
+  font-size: 2rem!important;
 }
 </style>

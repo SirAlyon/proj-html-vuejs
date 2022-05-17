@@ -5,32 +5,20 @@
         <img :src="require('@/assets/img/' + logo_src)" alt="" />
       </div>
       <div class="menu">
-        <a href="#" v-for="(item, index) in menuItems" :key="index">
+        <a
+          href="#"
+          v-for="(item, index) in menuItems"
+          :key="index"
+          @click="activeLink($event)"
+          class="menu_links"
+        >
           {{ item }}
-          <span class="custom-fs">
-            <font-awesome-icon icon="fa-solid fa-angle-down" />
-          </span>
+
+          <font-awesome-icon
+            icon="fa-solid fa-angle-down"
+            class="custom-fs mx-2"
+          />
         </a>
-        <!--           <a href="#">
-            Shop
-            <font-awesome-icon icon="fa-solid fa-angle-down" />
-          </a>
-          <a href="#">
-            Products
-            <font-awesome-icon icon="fa-solid fa-angle-down" />
-          </a>
-          <a href="#">
-            Categories
-            <font-awesome-icon icon="fa-solid fa-angle-down" />
-          </a>
-          <a href="#">
-            News
-            <font-awesome-icon icon="fa-solid fa-angle-down" />
-          </a>
-          <a href="#">
-            Elements
-            <font-awesome-icon icon="fa-solid fa-angle-down" />
-          </a> -->
         <span class="shop_now"> SHOP NOW! </span>
         <div class="search mx-3">
           <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
@@ -47,13 +35,25 @@ export default {
     menuItems: Array,
     logo_src: String,
   },
+  methods: {
+    activeLink(event) {
+        const links = document.querySelectorAll('.menu_links')
+        links.forEach(link =>{
+            if (link.className.includes('active')){
+                link.classList.remove('active')
+            }
+        })
+      console.log(event);
+      event.target.classList.add('active')
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .bot_head {
   display: flex;
-  padding: 1rem 0;
+  padding: 0rem 0;
   .container {
     display: flex;
     justify-content: space-between;
@@ -68,8 +68,11 @@ export default {
   a {
     color: black;
     text-decoration: none;
+    height: 100% !important;
     margin-right: 1rem;
     margin-left: 1rem;
+    display: flex;
+    align-items: center;
   }
   .shop_now {
     background-color: #427ed5;
@@ -83,8 +86,18 @@ export default {
     display: flex;
     align-items: center;
   }
-  .custom-fs{
-      font-size: 0.8rem;
+  a:hover {
+    color: #427ed5;
+  }
+  .custom-fs {
+    font-size: 0.8rem;
+  }
+  .menu_links{
+      border-top: 4px solid transparent;
+      padding: 2.5rem 0;
+  }
+  .active {
+    border-top: 4px solid #427ed5;
   }
 }
 </style>

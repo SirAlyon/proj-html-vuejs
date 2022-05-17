@@ -3,12 +3,12 @@
     <div class="container">
       <div class="title">
         <hr />
-        <span>Best Seller</span>
+        <span>New Arrivals</span>
         <hr />
       </div>
       <div>Brand new products from top designers</div>
     </div>
-    <Slider :overlay="true"/>
+    <Slider :c_class="'custom_fs_2'"/>
   </div>
 </template>
 

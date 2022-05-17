@@ -13,12 +13,7 @@
                 <li>Email: info@company.com</li>
                 <li>web: theme-random.com</li>
               </ul>
-              <div class="socials">
-                <font-awesome-icon icon="fa-brands fa-facebook-f" />
-                <font-awesome-icon icon="fa-brands fa-twitter" />
-                <font-awesome-icon icon="fa-brands fa-instagram" />
-                <font-awesome-icon icon="fa-brands fa-youtube" />
-              </div>
+              <Socials />
             </div>
           </div>
           <div class="col-3" v-for="(p, index) in prev" :key="index">
@@ -91,8 +86,12 @@
 
 <script>
 import state from "@/state.js";
+import Socials from "@/components/SocialsComponent.vue";
 export default {
   name: "SiteFooterComponent",
+  components:{
+      Socials,
+  },
   data() {
     return {
       prev: null,

@@ -2,12 +2,7 @@
   <header>
     <div class="top_head">
       <div class="container">
-        <div class="socials">
-          <font-awesome-icon icon="fa-brands fa-facebook-f" />
-          <font-awesome-icon icon="fa-brands fa-twitter" />
-          <font-awesome-icon icon="fa-brands fa-instagram" />
-          <font-awesome-icon icon="fa-brands fa-youtube" />
-        </div>
+        <Socials />
         <div class="menu">
           <a href="#"> Shopping Cart </a>
           <a href="#">
@@ -32,10 +27,13 @@
 <script>
 
 import BotHeader from "@/components/BotHeaderComponent.vue";
+import Socials from "@/components/SocialsComponent.vue";
+
 export default {
   name: "SiteHeader",
   components:{
       BotHeader,
+      Socials
   },
   data(){
       return {
@@ -56,10 +54,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  .socials > * {
-    font-size: 1.2rem;
-    margin-right: 1rem;
   }
   a {
     text-decoration: none;
