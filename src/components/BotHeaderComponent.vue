@@ -2,7 +2,7 @@
   <div class="bot_head">
     <div class="container">
       <div class="logo">
-        <img :src="require('@/assets/img/' + logo_src)" alt="" />
+        <img @click="reload" :src="require('@/assets/img/' + logo_src)" alt="" />
       </div>
       <div class="menu">
         <a
@@ -46,6 +46,9 @@ export default {
       console.log(event);
       event.target.classList.add('active')
     },
+    reload(){
+      window.location.reload()
+    }
   },
 };
 </script>
@@ -64,6 +67,9 @@ export default {
   }
   .logo > img {
     height: 60px;
+    &:hover{
+      cursor: pointer;
+    }
   }
   a {
     color: black;
@@ -98,6 +104,7 @@ export default {
   }
   .active {
     border-top: 4px solid #427ed5;
+    color: #427ed5;
   }
 }
 </style>

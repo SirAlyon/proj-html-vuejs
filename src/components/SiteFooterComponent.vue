@@ -175,6 +175,9 @@ footer {
     justify-content: flex-start;
     border-bottom: 1px solid rgba(188, 188, 188, 0.15);
     color: white;
+    &:hover{
+      cursor: pointer;
+    }
   }
   .recent_posts {
     display: flex;
