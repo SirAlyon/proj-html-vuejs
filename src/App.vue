@@ -18,31 +18,28 @@
         <div class="col-4">
           <div class="collection">
             <img src="@/assets/img/winter_collection_bg.jpg" alt="" />
-            <div class="text">
-              <h3>Winter Collection</h3>
-              <div class="fs-4">STYLISH AND WARM</div>
-              <span class="collection_btn">VIEW MORE</span>
-            </div>
+            <CollectionsText
+              :title="'Winter Collection'"
+              :des="'STYLISH AND WARM'"
+            />
           </div>
         </div>
         <div class="col-4">
           <div class="collection">
             <img src="@/assets/img/spring_collection_bg.jpg" alt="" />
-            <div class="text">
-              <h3>Winter Collection</h3>
-              <div class="fs-4">STYLISH AND WARM</div>
-              <span class="collection_btn">VIEW MORE</span>
-            </div>
+            <CollectionsText
+              :title="'Spring Collection'"
+              :des="'BRIGHT AND COLORFUL'"
+            />
           </div>
         </div>
         <div class="col-4">
           <div class="collection">
             <img src="@/assets/img/autumn_collection_bg.jpg" alt="" />
-            <div class="text">
-              <h3>Winter Collection</h3>
-              <div class="fs-4">STYLISH AND WARM</div>
-              <span class="collection_btn">VIEW MORE</span>
-            </div>
+            <CollectionsText
+              :title="'Autumn Collection'"
+              :des="'RIGHT AND COMFORTABLE'"
+            />
           </div>
         </div>
       </div>
@@ -50,25 +47,19 @@
       <div class="free_shipping">
         <div class="card">
           <img src="@/assets/img/promo_box_1_bg.jpg" alt="" />
-          <div class="text">
-            <div class="title fw-bold fs-2">70% Off</div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
-              similique!
-            </p>
-            <span class="collection_btn">VIEW MORE</span>
-          </div>
+          <CollectionsText
+            :title="'70% Off'"
+            :des="lorem()"
+            :c_class="'custom_position_1'"
+          />
         </div>
         <div class="card">
           <img src="@/assets/img/promo_box_2_bg.jpg" alt="" />
-          <div class="text">
-            <div class="title fw-bold fs-2">70% Off</div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
-              similique!
-            </p>
-            <span class="collection_btn">VIEW MORE</span>
-          </div>
+          <CollectionsText
+            :title="'Free Shipping'"
+            :des="lorem()"
+            :c_class="'custom_position_1'"
+          />
         </div>
       </div>
       <NewArrivals />
@@ -169,7 +160,7 @@ import Testimonials from "@/components/TestimonialsComponent.vue";
 import ReviewProducts from "@/components/ReviewProductsComponent.vue";
 import SiteFooter from "@/components/SiteFooterComponent.vue";
 import SiteHeader from "@/components/SiteHeaderComponent.vue";
-
+import CollectionsText from "@/components/CollectionsText.vue";
 
 export default {
   name: "App",
@@ -180,7 +171,14 @@ export default {
     Testimonials,
     ReviewProducts,
     SiteFooter,
-    SiteHeader
+    SiteHeader,
+    CollectionsText,
+  },
+  methods: {
+    lorem() {
+      return `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
+              similique!`;
+    },
   },
 };
 </script>
@@ -197,7 +195,7 @@ export default {
 img {
   max-width: 100%;
 }
-hr{
+hr {
   opacity: 0.1;
 }
 /* Start Main CSS */
@@ -259,30 +257,6 @@ hr{
       object-position: top;
       object-fit: cover;
     }
-    .text {
-      position: absolute;
-      transform: translateX(-50%);
-      left: 50%;
-      bottom: 20%;
-      h3 {
-        font-size: 3rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-      }
-      .collection_btn {
-        display: inline-block;
-        border: 3px solid white;
-        padding: 0.7rem 2rem;
-        border-radius: 2rem;
-        margin-top: 1rem;
-        transition: linear 0.4s;
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.5);
-          color: black;
-          font-weight: bold;
-        }
-      }
-    }
   }
 }
 
@@ -301,27 +275,6 @@ hr{
   }
   img {
     width: 500px;
-  }
-  .text {
-    width: 50%;
-    text-align: start;
-    color: white;
-    position: absolute;
-    left: 35%;
-    top: 25%;
-    transform: translateX(-50%);
-  }
-  .collection_btn {
-    display: inline-block;
-    border: 3px solid white;
-    padding: 0.7rem 2rem;
-    border-radius: 2rem;
-    margin-top: 1rem;
-    transition: linear 0.4s;
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.5);
-      color: black;
-    }
   }
 }
 
@@ -421,5 +374,4 @@ hr{
     margin: 0 1rem;
   }
 }
-
 </style>
