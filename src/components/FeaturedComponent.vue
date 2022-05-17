@@ -8,19 +8,47 @@
       </div>
       <div>Must have products from out top sellers</div>
       <div class="gender">
-        <span class="categories active" @click="getFilter('Men', $event)">MEN</span>
-        <span class="categories" @click="getFilter('Women', $event)">WOMEN</span>
-        <span class="categories" @click="getFilter('Accessories', $event)">ACCESSORIES</span>
+        <span class="categories active" @click="getFilter('Men', $event)"
+          >MEN</span
+        >
+        <span class="categories" @click="getFilter('Women', $event)"
+          >WOMEN</span
+        >
+        <span class="categories" @click="getFilter('Accessories', $event)"
+          >ACCESSORIES</span
+        >
       </div>
       <div class="featured_card">
-        <div class="col-3" v-for="(product, index) in products" :key="index" v-show="product.genre == filterProduct">
+        <div
+          class="col-3"
+          v-for="(product, index) in products"
+          :key="index"
+          v-show="product.genre == filterProduct"
+        >
           <div class="product">
-            <img :src="require('@/assets/img/products/' + product.src)" alt="" />
-            <div class="name">{{product.name}}</div>
-            <div class="info">{{product.info}}</div>
+            <div class="card_img">
+              <img
+                :src="require('@/assets/img/products/' + product.src)"
+                alt=""
+              />
+              <div class="card_overlay">
+                <font-awesome-icon icon="fa-solid fa-circle-check" class="fa-solid"/>
+              </div>
+            </div>
+
+            <div class="name">{{ product.name }}</div>
+            <div class="info">
+              <span v-for="(category, index) in product.category" :key="index"
+                >{{ styleCategory(category, index, product.category) }}
+              </span>
+            </div>
             <div class="price">
-              <span class="discounted_price" v-if="product.original_price !== null">${{product.original_price}}</span>
-              <span>${{product.final_price}}</span>
+              <span
+                class="discounted_price"
+                v-if="product.original_price !== null"
+                >${{ product.original_price }}</span
+              >
+              <span>${{ product.final_price }}</span>
             </div>
           </div>
         </div>
@@ -35,31 +63,37 @@ export default {
   name: "FeaturedComponent",
   data() {
     return {
-      filterProduct: 'Men',
-      products: null
-    }
+      filterProduct: "Men",
+      products: null,
+    };
   },
   methods: {
-      getFilter(word, event){
-          //console.log(this.filterProduct, word);
-          this.filterProduct = word
-          
-          const categories = document.querySelectorAll('.categories')
-          //console.log(categories);
-          categories.forEach(category =>{
-              if (category.className.includes('active')){
-                  category.classList.remove('active')
-              }
-          })
-          //console.log(event.target);
-          event.target.classList.toggle('active')
-      },
+    getFilter(word, event) {
+      //console.log(this.filterProduct, word);
+      this.filterProduct = word;
 
+      const categories = document.querySelectorAll(".categories");
+      //console.log(categories);
+      categories.forEach((category) => {
+        if (category.className.includes("active")) {
+          category.classList.remove("active");
+        }
+      });
+      //console.log(event.target);
+      event.target.classList.toggle("active");
+    },
+    styleCategory(str, index, array) {
+      if (index == array.length - 1) {
+        return `${str}.`;
+      } else {
+        return `${str},`;
+      }
+    },
   },
-  mounted(){
+  mounted() {
     console.log(state.products);
-    this.products = state.products
-  }
+    this.products = state.products;
+  },
 };
 </script>
 
@@ -94,16 +128,55 @@ export default {
         background-color: white;
       }
     }
-    .active{
-        background-color: white;
+    .active {
+      background-color: white;
     }
   }
   .featured_card {
     display: flex;
     justify-content: space-around;
+
     .product {
-      margin-top: 2rem;
+      margin-top: 4rem;
       text-align: start;
+      .card_img {
+        position: relative;
+        &:hover .card_overlay {
+          display: block;
+        }
+      }
+      .card_overlay {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(
+          rgba(90, 137, 212, 0.96),
+          rgba(237, 165, 210, 1)
+        );
+        display: none;
+        border-radius: 0.3rem;
+        animation-name: fadeIn;
+        animation-duration: 0.7s;
+        .fa-solid{
+          position: absolute;
+          transform: translate(-50%, -50%);
+          left: 50%;
+          top: 50%;
+          font-size: 4rem;
+          cursor: pointer;
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
       .name {
         font-weight: bold;
         font-size: 1.2rem;
@@ -124,4 +197,5 @@ export default {
     }
   }
 }
+
 </style>
