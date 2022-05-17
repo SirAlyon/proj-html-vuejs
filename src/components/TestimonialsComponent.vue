@@ -76,7 +76,7 @@ export default {
       if (!event.target.className.includes("active")) {
         event.target.classList.add("active");
       }
-      
+
       this.activeT = Number(event.target.id.slice(12, 13));
     },
   },
@@ -114,11 +114,11 @@ export default {
       padding: 0 25%;
       margin: 2rem 0;
     }
-    .circles{
+    .circles {
       position: absolute;
       bottom: 15%;
       transform: translateX(-50%);
-      left:50%;
+      left: 50%;
     }
   }
   .circles > span {
@@ -131,6 +131,21 @@ export default {
   }
   .active {
     background-color: white;
+  }
+  .testimonial {
+    animation-name: fadeInRight;
+    animation-duration: 0.5s;
+  }
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 }
 </style>

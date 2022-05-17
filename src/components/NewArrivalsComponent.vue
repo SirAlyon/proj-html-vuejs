@@ -6,9 +6,9 @@
         <span>New Arrivals</span>
         <hr />
       </div>
-      <div>Brand new products from top designers</div>
+      <div class="fs-5 mt-3">Brand new products from top designers</div>
     </div>
-    <Slider :c_class="'custom_fs_2'"/>
+    <Slider :c_class="'custom_fs_2'" :actions="'custom_fs_3'"/>
   </div>
 </template>
 

@@ -86,6 +86,16 @@ const state = Vue.observable({
             id: 9,
             rate: 5
         },
+        {
+            name: "Leather Gloves",
+            category: ["Accessories"],
+            original_price: 200,
+            final_price: 170,
+            src: "leather_gloves.jpg",
+            genre: "Accessories",
+            id: 10,
+            rate: 5
+        }
     ],
     previews: [
         {
@@ -102,9 +112,38 @@ const state = Vue.observable({
         },
         {
             name: 'LATEST REVIEWS',
-            ids: [6, 5, 9]
+            ids: [6, 5, 10]
         }
     ],
+    articles: [
+        {
+            title: 'Lorem ipsum dolor sit amet consectetur.',
+            text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Aspernatur fuga nulla voluptatibus totam enim dicta amet
+            cupiditate, voluptas at explicabo.`,
+            src: 'post_img_10-320x202.jpg',
+            date: 'Semptember 9th, 2015',
+            comments: 0
+        },
+        {
+            title: 'Lorem ipsum dolor sit amet consectetur.',
+            text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Aspernatur fuga nulla voluptatibus totam enim dicta amet
+            cupiditate, voluptas at explicabo.`,
+            src: 'post_img_11-320x202.jpg',
+            date: 'Semptember 24th, 2015',
+            comments: 3
+        },
+        {
+            title: 'Lorem ipsum dolor sit amet consectetur.',
+            text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Aspernatur fuga nulla voluptatibus totam enim dicta amet
+            cupiditate, voluptas at explicabo.`,
+            src: 'post_img_12-320x202.jpg',
+            date: 'October 13th, 2016',
+            comments: 15
+        }
+    ]
 })
 // esporta lo state
 export default state

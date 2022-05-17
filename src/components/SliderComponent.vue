@@ -16,13 +16,13 @@
             </span>
           </div>
           <div class="price" :class="c_class">${{ product.final_price }}</div>
-          <div class="actions fw-bold">
+          <div class="actions fw-bold" :class="actions">
             <span>
-              <font-awesome-icon icon="fa-solid fa-cart-shopping" :class="c_class"/>
+              <font-awesome-icon icon="fa-solid fa-cart-shopping" />
               Add to cart
             </span>
             <span>
-              <font-awesome-icon icon="fa-solid fa-list-ul" :class="c_class"/>
+              <font-awesome-icon icon="fa-solid fa-list-ul"/>
               Details
             </span>
           </div>
@@ -46,6 +46,7 @@ export default {
   name: "SliderComponent",
   props: {
     c_class: String,
+    actions: String
   },
   data() {
     return {
@@ -97,6 +98,7 @@ export default {
     justify-content: space-between;
     transform: translateY(-50%);
     top: 50%;
+    z-index: 51;
     left: 0;
   }
   .arrows > span {
@@ -129,6 +131,7 @@ img {
   width: 80%;
   margin: 0 10%;
   position: absolute;
+  z-index: 100;
   top: 0;
   left: 0;
   background-image: linear-gradient(
@@ -143,6 +146,7 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
   .title {
     font-size: 2rem;
     font-weight: bold;
@@ -178,10 +182,14 @@ img {
   }
 }
 
+
 .custom_fs_1{
   font-size: 0.95rem!important;
 }
 .custom_fs_2{
   font-size: 2rem!important;
+}
+.custom_fs_3{
+  font-size: 1.5rem!important;
 }
 </style>

@@ -4,14 +4,14 @@ import App from './App.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 /* import specific icons 👇 QUI AGGIUNGI LE ICONE che vuoi usare in camelCase */
-import { faUserSecret, faAngleDown, faMagnifyingGlass, faCartShopping, faEnvelope, faAngleLeft, faAngleRight, faStar, faCircleCheck, faListUl} from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret, faAngleDown, faMagnifyingGlass, faCartShopping, faEnvelope, faAngleLeft, faAngleRight, faStar, faCircleCheck, faListUl, faFireFlameCurved} from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faFacebookF, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* add icons to the library 👇 QUI AGGIUNGI IL NOME DELL'ICONA in camelCase*/
-library.add(faUserSecret, faAngleDown, faMagnifyingGlass, faTwitter, faFacebookF, faYoutube, faInstagram, faCartShopping, faEnvelope, faAngleLeft, faAngleRight, faStar, faCircleCheck, faListUl) 
+library.add(faUserSecret, faAngleDown, faMagnifyingGlass, faTwitter, faFacebookF, faYoutube, faInstagram, faCartShopping, faEnvelope, faAngleLeft, faAngleRight, faStar, faCircleCheck, faListUl, faFireFlameCurved) 
 
 /* add font awesome icon component */
 Vue.component('font-awesome-icon', FontAwesomeIcon)

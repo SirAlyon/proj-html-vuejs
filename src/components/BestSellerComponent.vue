@@ -6,7 +6,7 @@
         <span>Best Seller</span>
         <hr />
       </div>
-      <div>Must have products from out top sellers</div>
+      <div class="fs-5 mt-3">Must have products from out top sellers</div>
       <Slider :c_class="'custom_fs_1'"/>
     </div>
   </div>

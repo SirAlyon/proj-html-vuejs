@@ -6,7 +6,7 @@
         <span>Featured Products</span>
         <hr />
       </div>
-      <div>Must have products from out top sellers</div>
+      <div class="fs-5 mt-3">Must have products from out top sellers</div>
       <div class="gender">
         <span class="categories active" @click="getFilter('Men', $event)"
           >MEN</span
@@ -125,7 +125,7 @@ export default {
       border: 1px solid lightgray;
       background-color: rgba(211, 211, 211, 0.5);
       &:hover {
-        background-color: white;
+        background-color: rgba(235, 235, 235, 0.5);
       }
     }
     .active {

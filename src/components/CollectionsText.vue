@@ -1,7 +1,7 @@
 <template>
   <div class="text" :class="c_class">
     <h3>{{ title }}</h3>
-    <div>{{ des }}</div>
+    <div class="fw-bold">{{ des }}</div>
     <span class="collection_btn">VIEW MORE</span>
   </div>
 </template>
@@ -41,7 +41,7 @@ export default {
     &:hover {
       background-color: rgba(255, 255, 255, 0.5);
       color: black;
-      font-weight: bold;
+      cursor: pointer;
     }
   }
 }

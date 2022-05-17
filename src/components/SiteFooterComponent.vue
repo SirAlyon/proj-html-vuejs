@@ -52,10 +52,10 @@
               <h5>RECENT POSTS</h5>
               <div
                 class="prev_card p-3"
-                v-for="(post, index) in 6"
+                v-for="(article, index) in articles"
                 :key="index"
               >
-                > Lorem ipsum dolor sit
+                > {{article.title}}
               </div>
             </div>
           </div>
@@ -96,6 +96,7 @@ export default {
     return {
       prev: null,
       products: null,
+      articles: null,
       randomTags: [
         "block",
         "boots",
@@ -121,6 +122,7 @@ export default {
     });
 
     this.products = state.products;
+    this.articles = state.articles
 
     console.log(this.prev);
   },
